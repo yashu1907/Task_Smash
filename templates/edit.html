@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% block head %}
+<h1>Table Smash 2.0</h1>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>EDIT YOUR TASK</h1>
+    <form action="/update/{{task.id}}" method="POST">
+         <input type="text"
+         name="content"
+         id="content"
+         value="{{task.content}}"
+         />
+         <input type="submit" 
+         value="Update"
+         />
+    </form>
+</div>
+{% endblock %}
